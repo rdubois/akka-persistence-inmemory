@@ -11,7 +11,7 @@ import scalariform.formatter.preferences.FormattingPreferences
 // A plugin extends the build definition, most commonly by adding new settings. The new settings could be new tasks.
 // Plugins usually provide settings that get added to a project to enable the plugin’s functionality.
 //
-// A plugin can declare that its settings be automatically added to the build definition, 
+// A plugin can declare that its settings be automatically added to the build definition,
 // in which case you don’t have to do anything to add them.
 //
 // If you’re using an auto plugin that requires explicit enablement,
@@ -27,26 +27,26 @@ import scalariform.formatter.preferences.FormattingPreferences
 //
 // If the plugin needs to append settings at the build-level (that is, in ThisBuild) there’s a 'buildSettings' method.
 //
-// The 'globalSettings' is appended once to the global settings (in Global). 
+// The 'globalSettings' is appended once to the global settings (in Global).
 // These allow a plugin to automatically provide new functionality or new defaults.
 //
 // ====================
 // Plugin Dependencies:
 // ====================
-// The 'requires' method returns a value of type Plugins, which is a DSL 
-// for constructing the dependency list. The requires method typically contains 
+// The 'requires' method returns a value of type Plugins, which is a DSL
+// for constructing the dependency list. The requires method typically contains
 // one of the following values:
 // empty (No plugins, this is the default)
 // other auto plugins
 // && operator (for defining multiple dependencies)
 //
-// For example, we might want to create a triggered plugin that can append commands 
-// automatically to the build. To do this, set the requires method to return empty 
+// For example, we might want to create a triggered plugin that can append commands
+// automatically to the build. To do this, set the requires method to return empty
 // (this is the default), and override the trigger method with allRequirements.
 // Projects can also exclude plugins using the disablePlugins method
 //
 object ProjectAutoPlugin extends AutoPlugin {
-  final val AkkaVersion = "2.5.1"
+  final val AkkaVersion = "2.6-SNAPSHOT"
   final val ScalazVersion = "7.2.12"
   final val ScalaTestVersion = "3.0.3"
   final val LogbackVersion = "1.2.3"
@@ -77,7 +77,7 @@ object ProjectAutoPlugin extends AutoPlugin {
 
     licenses += ("Apache-2.0", url("http://opensource.org/licenses/apache2.0.php")),
 
-    scalaVersion := "2.12.2",
+    scalaVersion := "2.11.11",
     crossScalaVersions := Seq("2.11.11", "2.12.2"),
     crossVersion := CrossVersion.binary,
 
