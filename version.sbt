@@ -1,1 +1,1 @@
-version := "3.1-SNAPSHOT"
+version := "2.5.1.1-talend"
