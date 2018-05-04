@@ -1,1 +1,1 @@
-version := "2.5.1.1-talend"
+version := "2.5.1.2-talend"
